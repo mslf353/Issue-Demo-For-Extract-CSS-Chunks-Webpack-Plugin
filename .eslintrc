@@ -1,0 +1,46 @@
+{
+	"extends": ["eslint:recommended", "plugin:react/recommended", "plugin:mocha/recommended"],
+
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"sourceType": "module"
+	},
+	
+	"env": {
+		"browser": true,
+		"node": true,
+		"mocha": true
+	},
+	
+	"parser": "babel-eslint",
+	
+	"rules": {
+		"no-console": "off",
+		"quotes": ["warn", "single"],
+		"strict": ["error", "never"],
+		"react/jsx-uses-react": "error",
+		"react/jsx-uses-vars": "error",
+		"react/react-in-jsx-scope": "error",
+		"react/no-children-prop": "off"
+	},
+
+	"globals": {
+		"System": true,
+		"Promise": true,
+		"__PORT__": true,
+		"__API_PREFIX__": true,
+		"__NODE_ENV__": true,
+		"__IS_PROD__": true,
+		"__IS_DEV__": true,
+		"__IS_CLIENT__": true,
+		"__IS_SERVER__": true
+	},
+	
+	"plugins": [
+		"react",
+		"mocha"
+	]
+}

@@ -1,0 +1,54 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	font-family: 'Open Sans';
+	animation: test 1s;
+}
+
+@keyframes test {
+	from { transform: transitionY(100%); }
+	to { transform: transitionY(0); }
+}
+
+@blurEffect: 10px;
+
+#page-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	width: 100%;
+	height: 100%;
+
+	&.blur {
+		filter: blur(@blurEffect);
+		transition: 250ms;
+	}
+}
+
+#body-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	flex: 1 0 auto;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	background: #fafafa;
+	color: #333;
+
+	> span {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		flex: 1 0 auto;
+	}
+}
+
+.no-scroll {
+	overflow: hidden;
+	height: 100vh;
+}

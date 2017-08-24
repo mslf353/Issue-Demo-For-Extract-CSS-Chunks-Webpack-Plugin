@@ -1,0 +1,26 @@
+#wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	&:after {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+	z-index: 999;
+	background-color: fade(#000, 80%);
+	text-align: center;
+
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 99%;
+		margin: 0 auto;
+	}
+
+	&.absolute { position: absolute; }
+}

@@ -1,0 +1,40 @@
+.article {
+	padding: 3rem;
+
+	&.odd {
+		background-color: #333;
+		color: #fff;
+	}
+
+	&.teaser { padding: 1.5rem 3rem; }
+}
+
+.title { font-size: 1.5rem; }
+
+.created, .updated {
+	margin: 0.5em 0;
+	font-size: 1rem;
+}
+
+.published { font-weight: bold; }
+
+.image {
+	margin: 0 10px 10px 0;
+	width: 200px;
+	height: auto;
+	float: left;
+}
+
+.body {
+	font-size: 1rem;
+	line-height: 2;
+}
+
+.action-links { margin: 0.8em 0 0.3em; }
+
+.action-link {
+	cursor: pointer;
+	font-weight: bold;
+
+	&:not(:last-child) { margin-right: 15px; }
+}

@@ -1,0 +1,22 @@
+.wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+	background: fade(#fff, 70%);
+	text-align: center;
+
+	> * {
+		position: relative;
+		z-index: 2;
+	}
+
+	&:after {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+}

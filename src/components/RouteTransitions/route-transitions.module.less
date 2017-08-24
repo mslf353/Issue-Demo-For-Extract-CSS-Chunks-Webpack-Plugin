@@ -1,0 +1,101 @@
+/* SLIDE */
+
+	.absolute-fill() {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+.slide-appear {
+	opacity: 0;
+	transform: translateY(100%);
+}
+
+.slide-appear-active {
+	opacity: 1;
+	transform: translateY(0%);
+	transition: 1s;
+}
+
+.slide-enter, .slide-before-enter {
+	.absolute-fill();
+	opacity: 0;
+}
+
+.slide-enter { transform: translateX(100%); }
+.slide-before-enter { transform: translateX(-100%); }
+
+.slide-enter-active, .slide-before-enter-active {
+	opacity: 1;
+	transform: translateX(0%);
+	transition: 500ms;
+}
+
+.slide-leave, .slide-before-leave {
+	.absolute-fill();
+	opacity: 1;
+	transform: translateX(0%);
+}
+
+.slide-leave-active, .slide-before-leave-active {
+	opacity: 0;
+	transition: 500ms;
+}
+
+.slide-leave-active { transform: translateX(-100%); }
+.slide-before-leave-active { transform: translateX(100%); }
+
+/* FADE */
+
+.fade-appear, .fade-enter, .fade-leave { .absolute-fill(); }
+
+.fade-appear, .fade-enter { opacity: 0; }
+
+.fade-appear-active, .fade-enter-active, .fade-leave-active { transition: 500ms; }
+
+.fade-appear-active, .fade-enter-active { opacity: 1; }
+
+.fade-leave { opacity: 1; }
+
+.fade-leave-active { opacity: 0; }
+
+/* SCALE */
+
+.scale-appear {
+	opacity: 0;
+	transform: translateY(100%) scale(0);
+}
+
+.scale-appear-active {
+	opacity: 1;
+	transform: translateY(0%) scale(1);
+	transition: 1s;
+}
+
+.scale-enter, .scale-before-enter {
+	.absolute-fill();
+	opacity: 0;
+}
+
+.scale-enter { transform: translateX(100%) scale(0); }
+.scale-before-enter { transform: translateX(-100%) scale(0); }
+
+.scale-enter-active, .scale-before-enter-active, .scale-leave-active, .scale-before-leave-active { transition: 500ms; }
+
+.scale-enter-active, .scale-before-enter-active {
+	opacity: 1;
+	transform: translateX(0%) scale(1);
+}
+
+.scale-leave, .scale-before-leave {
+	.absolute-fill();
+	opacity: 1;
+	transform: translateX(0%) scale(1);
+	transition: 500ms;
+}
+
+.scale-leave-active, .scale-before-leave-active { opacity: 0; }
+
+.scale-leave-active { transform: translateX(-100%) scale(0); }
+.scale-before-leave-active { transform: translateX(100%) scale(0); }

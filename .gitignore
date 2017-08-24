@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+build-client
+build-server
+logs
+nohup.out
+/util
+sftp-config.json
+npm-debug.log
+*.sublime-project
+*.sublime-workspace
